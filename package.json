@@ -1,0 +1,35 @@
+{
+  "name": "wedding-operations",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "predev": "node scripts/setup-dress.mjs && node scripts/setup-contacts.mjs && node --experimental-strip-types scripts/setup-celebrations.mjs --schema-only",
+    "dev": "next dev",
+    "build": "next build",
+    "prestart": "node scripts/setup-dress.mjs --production && node scripts/setup-contacts.mjs --production && node --experimental-strip-types scripts/setup-celebrations.mjs --schema-only --production",
+    "start": "next start",
+    "check": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test tests/*.test.ts",
+    "db:setup": "node --env-file=.env scripts/setup.mjs",
+    "db:dress": "node scripts/setup-dress.mjs",
+    "db:contacts": "node scripts/setup-contacts.mjs",
+    "db:celebrations": "node --experimental-strip-types scripts/setup-celebrations.mjs"
+  },
+  "dependencies": {
+    "@next/env": "16.3.6",
+    "@vercel/analytics": "^1.5.0",
+    "next": "^16.2.0",
+    "pg": "^8.16.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "@types/pg": "^8.15.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "prettier": "^3.9.9",
+    "typescript": "^5.8.0"
+  }
+}
