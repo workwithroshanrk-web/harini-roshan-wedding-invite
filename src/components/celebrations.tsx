@@ -29,6 +29,7 @@ export default function Celebrations({
           )
           .map((event) => {
             const date = event.event_date?.slice(0, 10) || event.starts;
+            const mapUrl = event.map_url || celebrations.find(item => item.id === event.id && item.location === event.location)?.map_url;
             return (
               <article className="celebration-card" key={event.id}>
                 <p className="eyebrow">
@@ -60,6 +61,7 @@ export default function Celebrations({
                 <p className="quiet">
                   {event.location || "Venue to be announced"}
                 </p>
+                {mapUrl && <p><a href={mapUrl} target="_blank" rel="noopener noreferrer" aria-label={`Open ${event.location} in Google Maps`}>Open in Google Maps ↗</a></p>}
                 {event.description && <p>{event.description}</p>}
                 <div
                   className="event-countdown"

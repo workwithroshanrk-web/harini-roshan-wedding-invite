@@ -7,7 +7,8 @@ export const celebrations = [
     time_label: "Evening · 6:00–8:30 PM",
     starts: "2027-01-20T18:00:00+05:30",
     ends: "2027-01-20T20:30:00+05:30",
-    location: "",
+    location: "Reddiyar Marriage Mahal",
+    map_url: "https://www.google.com/maps/place/Reddiyar+Marriage+Mahal/@9.3710229,77.9112417,17z/data=!3m1!4b1!4m6!3m5!1s0x3b06cadad8c20821:0xd914149569201629!8m2!3d9.3710229!4d77.9138166!16s%2Fg%2F11bxftr699",
     description: "",
   },
   {
@@ -19,6 +20,7 @@ export const celebrations = [
     starts: "2027-04-17T18:00:00+05:30",
     ends: null,
     location: "Divyaguru Mahal, Peraiyur",
+    map_url: "https://www.google.com/maps/place/DIVYAGURU+MAHAL/@9.7448586,77.7870352,17z/data=!3m1!4b1!4m6!3m5!1s0x3b072900018749d7:0xdf9f1ee8ba82a154!8m2!3d9.7448586!4d77.7896101!16s%2Fg%2F11x5v2mnyx",
     description: "",
   },
   {
@@ -30,6 +32,7 @@ export const celebrations = [
     starts: "2027-04-18T09:00:00+05:30",
     ends: null,
     location: "Divyaguru Mahal, Peraiyur",
+    map_url: "https://www.google.com/maps/place/DIVYAGURU+MAHAL/@9.7448586,77.7870352,17z/data=!3m1!4b1!4m6!3m5!1s0x3b072900018749d7:0xdf9f1ee8ba82a154!8m2!3d9.7448586!4d77.7896101!16s%2Fg%2F11x5v2mnyx",
     description: "",
   },
 ];
@@ -55,6 +58,7 @@ export type Celebration = {
   starts?: string | null;
   ends?: string | null;
   location?: string;
+  map_url?: string;
   description?: string;
 };
 
